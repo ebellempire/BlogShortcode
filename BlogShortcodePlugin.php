@@ -28,9 +28,10 @@ function bs_sortByDateDesc( $a, $b ) {
 }
 
 function bs_display_postlist($args){
-	if($current=get_current_record('SimplePagesPage',false)){
-		$blogParentId=isset($args['parent']) && ($bp=get_record('SimplePagesPage',array('slug'=>$args['parent']))) ? 
-			$bp->id : $current->id;
+	$current=get_current_record('SimplePagesPage',false);
+	$blogParentId=isset($args['parent']) && ($bp=get_record('SimplePagesPage',array('slug'=>$args['parent']))) ? 
+		$bp->id : $current->id;
+	if($blogParentId){			
 		$pages = get_db()->getTable('SimplePagesPage')->findAll();
 		$total=isset($args['number']) ? filter_var($args['number'],FILTER_VALIDATE_INT)  : 10;
 		$excerpt_length=isset($args['length']) ? filter_var($args['length'],FILTER_VALIDATE_INT) : 500; 
