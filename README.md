@@ -2,7 +2,7 @@
 Allows users to display a list of simple pages in a blog-like format.
 
 ## Usage
-Create a simple page to use as a "blog" (for example, a page with the title of "News and Events" and the slug "news"). The slug is important because it will be the main way you control which posts appear. Create "blog posts" by adding new simple pages and organizing them as children of the chosen "blog" page (for instance, setting the "parent page" to "News and Events"). 
+Create a simple page to use as a "blog" (for example, a page with the title of "News and Events" and the slug "news"). The slug is important because it will be the main way you control which posts appear. Create "blog posts" by adding new simple pages and organizing them as *children* of the chosen "blog" page (for instance, setting the "parent page" to "News and Events"). Add the `[blog]` shortcode to the page you want to serve as your blog. See options below.
 
 ## Options
 - **parent**: the slug of the parent page whose child pages should be displayed. *String* (default is `current page`)
