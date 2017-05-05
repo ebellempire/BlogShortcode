@@ -18,3 +18,6 @@ Placing this on a simple page will display all children of that page as a blog-s
 ## Example with all options
 `[blog parent="news" number="10" length="500" author="false" date="true"]`
 This example will diplay the *10* most recent children of the page that has the slug *news*. Each entry will display a *date* in the byline but not an *author* and the text snippet for each entry will be *500* characters long.
+
+## Screenshot
+![Screenshot](plugin.png)
