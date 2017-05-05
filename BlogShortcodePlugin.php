@@ -5,21 +5,16 @@ class BlogShortcodePlugin extends Omeka_Plugin_AbstractPlugin
 	protected $_hooks = array(
 		'initialize',
 	);
-
-
-	/**
-	 * Add Shortcode.
-	 */
-
-    public function hookInitialize()
-    {
-        add_shortcode('blog', array($this, 'bs_postlist'));
-    }
-    
-    public function bs_postlist($args)
-    {
-        return '<div id="bs-widget-container">'.bs_display_postlist($args).'</div>';
-    }	     
+	
+	public function hookInitialize()
+	{
+	    add_shortcode('blog', array($this, 'bs_postlist'));
+	}
+	
+	public function bs_postlist($args)
+	{
+	    return '<div id="bs-widget-container">'.bs_display_postlist($args).'</div>';
+	}	     
 	
 }	
 
