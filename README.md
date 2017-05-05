@@ -13,11 +13,23 @@ Create a simple page to use as a "blog" (for example, a page with the title of "
 
 ## Example with no options
 `[blog]`
+
 Placing this on a simple page will display all children of that page as a blog-styled list, with the most recently-added at the top.
 
 ## Example with all options
 `[blog parent="news" number="10" length="500" author="false" date="true"]`
+
 This example will diplay the *10* most recent children of the page that has the slug *news*. Each entry will display a *date* in the byline but not an *author* and the text snippet for each entry will be *500* characters long.
+
+## Usage outside of Simple Pages
+Theme developers may add support for usage anywhere on their Omeka site. For example, you could create a theme setting called News Widget (as an HTML text area where a user might place the shortcode) and add the following to your homepage or other theme template.
+
+```
+<?php
+	$t=get_theme_option('News Widget');
+	echo $this->shortcodes($t);
+?>
+```
 
 ## Screenshot
 ![Screenshot](plugin.png)
